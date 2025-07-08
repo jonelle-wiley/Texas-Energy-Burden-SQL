@@ -1,51 +1,63 @@
-# Texas Energy Burden Analysis (SQL + Tableau)
+Texas Energy Burden Analysis (SQL + Tableau)
+Overview
+This project analyzes energy burden across Texas ZIP Code Tabulation Areas (ZCTAs) to identify areas where energy costs disproportionately impact low-income households. Using SQL for data preparation and Tableau for visualization, the project delivers clear, actionable insights to support equitable energy policy and resource allocation.
 
-## Overview
+Objectives
+Calculate average energy burden across Texas ZCTAs.
 
-This project analyzes energy burden across Texas ZIP Code Tabulation Areas (ZCTAs) to identify areas where energy costs disproportionately impact low-income households. Using SQL for data preparation and Tableau for visualization, this project provides clear, actionable insights for targeted energy equity interventions.
+Identify ZIP codes with above-average energy burdens.
 
-## Objectives
+Visualize high-burden areas using Tableau dashboards.
 
-* Calculate average energy burden across Texas ZCTAs.
-* Identify ZIP codes with above-average energy burden.
-* Visualize high-burden areas using Tableau dashboards.
-* Support data-driven decisions for equitable energy policy and planning.
+Support data-driven decisions for equitable energy planning.
 
-## Dataset
+Dataset
+Source: Public Texas energy burden and income data (2023).
 
-* **Source:** Publicly available Texas energy burden and income data (2023).
-* **Columns include:**
+Columns:
 
-  * ZIP Code
-  * Median Income
-  * Energy Burden (%)
-  * Margin of Error
-  * Annual Energy Cost
+ZIP Code
 
-## Tools Used
+Median Income
 
-* SQL (SQLite/DB Browser): Data cleaning, filtering, aggregation, and band analysis.
-* Tableau: Visualization of burden bands and geographic distribution.
-* GitHub: Version control and portfolio presentation.
+Energy Burden (%)
 
-## Key SQL Processes
+Margin of Error
 
-* Categorized ZIP codes into burden bands:
+Annual Energy Cost
 
-  * `<2%`
-  * `2-3%`
-  * `3-4%`
-  * `>4%`
-* Calculated:
+Tools Used
+SQL (SQLite/DB Browser): Data cleaning, filtering, aggregation, and band analysis.
 
-  * Average energy burden
-  * Average median income per band
-  * ZIP code counts per band
-* Prepared a funnel analysis for Tableau.
+Tableau: Visualization of burden bands and geographic distribution.
 
-### Example SQL Snippet
+Excel: Quick chart generation from SQL outputs.
 
-```sql
+GitHub: Version control and project presentation.
+
+Key SQL Processes
+Categorized ZIP codes into energy burden bands:
+
+<2%
+
+2-3%
+
+3-4%
+
+>4%
+
+Calculated:
+
+Average energy burden
+
+Average median income per band
+
+ZIP code counts per band
+
+Example SQL Snippet
+sql
+Copy
+Edit
 SELECT
     CASE
         WHEN field5 < 2 THEN '<2% Burden'
@@ -58,35 +70,38 @@ SELECT
 FROM "Energy_Burden_Texas_ZIPCodes_2023"
 GROUP BY "Energy Burden Band"
 ORDER BY "ZIP Code Count" DESC;
-```
-
-## Visualizations
-
+Visualizations
 Tableau dashboards include:
 
-* Funnel chart visualizing drop-offs across burden bands.
-* Heat maps highlighting ZIP codes with the highest energy burdens.
-* Bar charts showing average median income vs. burden bands.
+KPI cards summarizing average median income, average energy burden, and margin of error.
 
-Visuals will be added to `/images` upon publication.
+Heat maps highlighting ZIP codes with the highest energy burdens.
 
-## Key Insights
+Bar charts showing average median income vs. burden bands.
 
-* The average energy burden across sampled Texas ZIP codes is 2.65%.
-* ZIP codes with an energy burden over 4% have significantly lower median incomes, indicating a need for targeted support.
-* Funnel analysis clarifies where energy relief programs may have the highest impact.
+Scatter plots illustrating the inverse relationship between income and energy burden.
 
-## Future Work
+Excel Output:
 
-* Expand dataset to include all Texas ZCTAs.
-* Join with ERCOT energy price data and weather data for deeper analysis.
-* Build an interactive Tableau Public dashboard for stakeholders.
+![Average Median Income by Energy Burden Band](screenshots/average_median_income_by_burden_band.png)
 
-## About
+This chart demonstrates that ZIP codes with lower energy burdens generally have higher median incomes, underscoring the relationship between income and energy affordability.
 
-I am Jonelle Wiley, a Data and Business Analyst focused on the energy and utilities sector. I leverage SQL, Tableau, and GIS mapping to translate complex data into actionable insights supporting equity and sustainability.
+Key Insights
+✅ The average energy burden across sampled Texas ZIP codes is 2.89%.
+✅ ZIP codes with >4% burden have significantly lower median incomes, indicating need for targeted support.
+✅ Visual analyses clarify where energy relief programs can have the highest community impact.
 
-## Contact
+Future Enhancements
+Incorporate full Texas ZCTA dataset for statewide mapping.
 
-* Email: [jonelle.wiley0210@gmail.com](mailto:jonelle.wiley0210@gmail.com)
-* LinkedIn: linkedin.com/in/jonelle-wiley-4ba570127
+Join with ERCOT energy price and weather data for predictive modeling.
+
+Build interactive Tableau dashboards for stakeholder reporting.
+
+About Me
+I am Jonelle Wiley, a Data and Business Intelligence Analyst specializing in the energy and utilities sector. I leverage SQL, Tableau, and GIS mapping to translate complex datasets into actionable insights that drive equitable, data-informed decisions.
+
+Contact
+📧 jonelle.wiley0210@gmail.com
+🔗 LinkedIn
