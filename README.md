@@ -28,29 +28,24 @@ GROUP BY
     county
 ORDER BY 
     energy_burden_percentage DESC;
+```
 
-This query calculates the average energy cost, income, and energy burden percentage by county across Texas to identify areas with the highest energy burden.
+This query calculates the **average energy cost, income, and energy burden percentage** by county across Texas to identify areas with the highest energy burden.
 
-🗂️ Files Included
-energy_burden_cleaning.sql – Data cleaning and preparation scripts.
+## 🗂️ Files Included
+- `energy_burden_cleaning.sql` – Data cleaning and preparation scripts.
+- `energy_burden_analysis.sql` – Queries for insights and aggregations.
+- `energy_burden_dashboard.twbx` – Tableau dashboard file.
+- `data/` – Cleaned CSV files for reproducibility.
 
-energy_burden_analysis.sql – Queries for insights and aggregations.
+## 🚀 How to Use
+1. Clone this repository to your local machine.
+2. Run **SQL scripts** on your SQL environment for cleaning and analysis.
+3. Open the Tableau dashboard for visual insights.
+4. Adapt scripts and dashboards for additional energy or utilities analysis projects.
 
-energy_burden_dashboard.twbx – Tableau dashboard file.
+## 📫 Contact
+**Jonelle Wiley** | Houston, TX | Remote  
+🔗 [LinkedIn](your-linkedin-link) | [Tableau Public](your-tableau-link)
 
-data/ – Cleaned CSV files for reproducibility.
-
-🚀 How to Use
-Clone this repository to your local machine.
-
-Run SQL scripts on your SQL environment for cleaning and analysis.
-
-Open the Tableau dashboard for visual insights.
-
-Adapt scripts and dashboards for additional energy or utilities analysis projects.
-
-📫 Contact
-Jonelle Wiley | Houston, TX | Remote
-🔗 LinkedIn | Tableau Public
-
-
+✨ Feel free to use or adapt these scripts for your **energy analytics and sustainability projects**.
