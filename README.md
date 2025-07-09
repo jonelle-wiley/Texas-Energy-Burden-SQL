@@ -46,6 +46,6 @@ This query calculates the **average energy cost, income, and energy burden perce
 
 ## 📫 Contact
 **Jonelle Wiley** | Houston, TX | Remote  
-🔗 [LinkedIn](your-linkedin-link) | [Tableau Public](your-tableau-link)
+🔗 [LinkedIn](https://www.linkedin.com/in/yourusername) | [Tableau Public](https://public.tableau.com/app/profile/yourusername)
 
 ✨ Feel free to use or adapt these scripts for your **energy analytics and sustainability projects**.
